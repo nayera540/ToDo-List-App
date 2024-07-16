@@ -1,0 +1,25 @@
+<!-- src/app/app.component.html -->
+<div class="container">
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <div class="task__input">
+    <input
+      type="text"
+      placeholder="What do you like to do?"
+      #taskInput
+      name="new_task"
+      (keydown.enter)="handleAddNewItem(taskInput.value); taskInput.value = ''"
+    />
+    <app-button
+      [text]="'Add Task'"
+      (btnClick)="handleAddNewItem(taskInput.value); taskInput.value = ''"
+    ></app-button>
+  </div>
+  <app-taskslist
+    [tasks]="tasks"
+    (deleteTask)="handleDeleteTask($event)"
+    (toggleTaskDone)="handleToggleTaskDone($event)"
+    (clearTasks)="handleClearTasks()"
+  ></app-taskslist>
+</div>

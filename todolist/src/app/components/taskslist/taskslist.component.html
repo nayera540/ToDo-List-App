@@ -1,0 +1,25 @@
+<div class="tasks__container">
+  <app-button
+    [text]="'Clear All Tasks'"
+    (btnClick)="onClearTasks()"
+  ></app-button>
+  <div class="tasks__list">
+    <mat-list>
+      <ng-container *ngFor="let task of tasks; let last = last">
+        <mat-list-item>
+          <mat-checkbox
+            [checked]="task.done"
+            (change)="onToggleDone(task)"
+          ></mat-checkbox>
+          <span [ngClass]="{'task-done': task.done}">{{ task.text }}</span>
+          <app-button
+            [text]="'Delete Item'"
+            (btnClick)="onDeleteTask(task)"
+          ></app-button>
+        </mat-list-item>
+        <!-- Place mat-divider conditionally if not the last item -->
+        <mat-divider *ngIf="!last"></mat-divider>
+      </ng-container>
+    </mat-list>
+  </div>
+</div>
