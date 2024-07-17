@@ -1,1 +1,6 @@
-<button mat-raised-button (click)="onClick()">{{ text }}</button>
+<button mat-raised-button (click)="onClick()" [ngClass]="className" class="button-class">
+  <span class="content-wrapper">
+    {{ text }}
+    <ng-content></ng-content>
+  </span>
+</button>

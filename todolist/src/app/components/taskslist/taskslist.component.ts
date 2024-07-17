@@ -1,5 +1,5 @@
 // src/app/components/taskslist/taskslist.component.ts
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { Task } from '../../Task';
 import { ButtonComponent } from '../button/button.component';
 import { CommonModule } from '@angular/common';
@@ -20,6 +20,7 @@ export class TaskslistComponent {
   @Output() deleteTask: EventEmitter<Task> = new EventEmitter();
   @Output() toggleTaskDone: EventEmitter<Task> = new EventEmitter();
   @Output() clearTasks: EventEmitter<void> = new EventEmitter();
+svg: any;
 
 
   onDeleteTask(task: Task) {

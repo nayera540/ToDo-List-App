@@ -1,23 +1,58 @@
 <div class="tasks__container">
-  <app-button
-    [text]="'Clear All Tasks'"
-    (btnClick)="onClearTasks()"
-  ></app-button>
+  <div class="tasks__header">
+    <app-button
+      [text]="'Clear All Tasks'"
+      (btnClick)="onClearTasks()"
+      [className]="'clear__tasks'"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 30 30"
+        width="20px"
+        height="20px"
+        [style.fill]="'white'"
+      >
+        <path
+          d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"
+        />
+      </svg>
+    </app-button>
+  </div>
   <div class="tasks__list">
     <mat-list>
       <ng-container *ngFor="let task of tasks; let last = last">
-        <mat-list-item>
-          <mat-checkbox
-            [checked]="task.done"
-            (change)="onToggleDone(task)"
-          ></mat-checkbox>
-          <span [ngClass]="{'task-done': task.done}">{{ task.text }}</span>
-          <app-button
-            [text]="'Delete Item'"
-            (btnClick)="onDeleteTask(task)"
-          ></app-button>
+        <mat-list-item class="task-item">
+          <div class="task-content">
+            <mat-checkbox
+              [checked]="task.done"
+              (change)="onToggleDone(task)"
+              [ngClass]="{ 'checkbox-custom-background': task.done }"
+            ></mat-checkbox>
+            <span
+              [ngClass]="{ 'task-done': task.done, 'task-text': true }"
+              (click)="onToggleDone(task)"
+              >{{ task.text }}</span
+            >
+          </div>
+          <div class="delete-button">
+            <app-button
+              (btnClick)="onDeleteTask(task)"
+              [className]="'delete__item'"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 30 30"
+                width="20px"
+                height="20px"
+                [style.fill]="'white'"
+              >
+                <path
+                  d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"
+                />
+              </svg>
+            </app-button>
+          </div>
         </mat-list-item>
-        <!-- Place mat-divider conditionally if not the last item -->
         <mat-divider *ngIf="!last"></mat-divider>
       </ng-container>
     </mat-list>

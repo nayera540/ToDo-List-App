@@ -1,9 +1,11 @@
 <!-- src/app/components/confirm-dialog/confirm-dialog.component.html -->
-<h1 mat-dialog-title>Confirm</h1>
-<div mat-dialog-content>
-  <p>Are you sure you want to delete all tasks?</p>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onCancel()">Cancel</button>
-  <button mat-button color="warn" (click)="onConfirm()">Confirm</button>
+<div class="custom-dialog">
+  <h1 mat-dialog-title>Confirm</h1>
+  <div mat-dialog-content class="custom-dialog-content">
+    <p>Are you sure you want to delete all tasks?</p>
+  </div>
+  <div mat-dialog-actions class="custom-dialog-actions">
+    <button mat-button class="custom-cancel-button" (click)="onCancel()">Cancel</button>
+    <button mat-button class="custom-confirm-button" (click)="onConfirm()">Confirm</button>
+  </div>
 </div>

@@ -1,0 +1,32 @@
+/* styles.css or any global stylesheet */
+.clear__tasks,
+.delete__item {
+  background-color: #ed5e68 !important;
+  color: #fff !important;
+}
+
+.add__task{
+  background-color: hsl(186, 34%, 60%) !important;
+  color: #fff !important;
+  margin-top: -0.45rem;
+
+}
+
+.delete__item{
+  padding-top: 0.5rem;
+}
+
+.clear__tasks{
+  padding-bottom: 0.5rem;
+}
+
+::ng-deep .clear__tasks svg{
+  position: relative;
+  top: 5px;
+}
+
+@media (max-width: 676px){
+  .add__task{
+    margin-top: 0.5rem;
+  }
+}

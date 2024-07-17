@@ -1,0 +1,49 @@
+.custom-dialog {
+  max-width: 50rem !important;
+  max-height: 50rem !important;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.custom-dialog {
+  background-color: #f0f0f0;
+  padding: 2.5rem !important;
+  justify-content: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dialog-actions button {
+  margin-top: 1rem !important;
+}
+
+.custom-dialog-actions>button {
+  margin: 1rem 1rem 0 0;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.custom-dialog-actions>button:hover {
+  cursor: pointer;
+}
+
+.custom-dialog-content {
+  margin-top: 0.5rem;
+}
+
+.custom-confirm-button {
+  background-color: #ed5e68;
+}
+
+.custom-cancel-button {
+  background-color: hsl(186, 34%, 60%);
+}

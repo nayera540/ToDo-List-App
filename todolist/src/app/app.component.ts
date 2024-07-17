@@ -17,7 +17,7 @@ import { LocalService } from './local.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'ToDo List';
+  title: string = 'TODO';
   tasks: Task[] = [];
 
   constructor(public dialog: MatDialog, private localStore: LocalService) {

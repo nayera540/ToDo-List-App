@@ -6,10 +6,12 @@ import { MatDialogRef } from '@angular/material/dialog';
   standalone: true,
   imports: [],
   templateUrl: './confirmclearlist.component.html',
-  styleUrls: ['./confirmclearlist.component.css'], 
+  styleUrls: ['./confirmclearlist.component.css'],
 })
 export class ConfirmclearlistComponent {
-  constructor(public dialogRef: MatDialogRef<ConfirmclearlistComponent>) {} // Corrected syntax error
+  constructor(public dialogRef: MatDialogRef<ConfirmclearlistComponent>) {}
+
+
   onConfirm(): void {
     this.dialogRef.close(true);
   }
