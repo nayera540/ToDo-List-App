@@ -40,7 +40,7 @@ The **ToDo-List-App** is a simple, yet powerful task management application. It 
   - HTML5
   - CSS3
 
-Visit the [ToDo-List-App repository](https://to-do-list-app-rho-ten.vercel.app/) for more information.
+Visit [ToDo-List-App](https://to-do-list-app-rho-ten.vercel.app/).
 
 Thank you for using the ToDo-List-App! We hope it helps you stay organized and productive.
 
